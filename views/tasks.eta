@@ -1,0 +1,16 @@
+<h1>Tasks</h1>
+
+<h2>Add a task</h2>
+
+<form method="POST" action="/tasks">
+  Name: <input type="text" name="name" />
+  <input type="submit" value="Create task!" />
+</form>
+
+<h2>Active tasks</h2>
+
+<ul>
+<% it.tasks.forEach((task) => { %>
+  <li><%= task.name %></li>
+<% }); %>
+</ul>
