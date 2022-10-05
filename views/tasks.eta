@@ -1,8 +1,9 @@
+<% layout("./layouts/layout.eta") %>
 <h1>Tasks</h1>
 
 <h2>Add a task</h2>
 
-<form method="POST" action="/tasks">
+<form method="POST">
   Name: <input type="text" name="name" />
   <input type="submit" value="Create task!" />
 </form>
@@ -11,6 +12,8 @@
 
 <ul>
 <% it.tasks.forEach((task) => { %>
-  <li><%= task.name %></li>
+  <li>
+    <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+  </li>
 <% }); %>
 </ul>
