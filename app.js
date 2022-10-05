@@ -29,4 +29,10 @@ const handleRequest = async (request) => {
       return new Response("Not found", { status: 404 });
     }
   };
-serve(handleRequest, { port: 7777 });
+let port = 7777;
+if (Deno.args.length > 0) {
+  const lastArgument = Deno.args[Deno.args.length - 1];
+  port = Number(lastArgument);
+}
+
+serve(handleRequest, { port: port });
