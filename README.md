@@ -4,4 +4,4 @@ I created a simple application for task management. The application allows creat
 
 The application use a three-tier architecture (client, server, database) and a layered architecture with four layers (views, controllers, services, database).
 
-technologies : deno(javascript framework), postgresql, heroku.
+technologies : deno(javascript), postgresql, heroku.
